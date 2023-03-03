@@ -10,9 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install pipenv
+      run: pipx install pipenv
     - uses: actions/setup-python@v2
       with:
         python-version: '3.9'
-    - run: pip install notebook requests bs4
+        cache: 'pipenv'
+    - run: pipenv install --python `which python`
     - name: Run scraper
-      run: jupyter execute scrape.ipynb
+      run: pipenv run jupyter execute scrape.ipynb
