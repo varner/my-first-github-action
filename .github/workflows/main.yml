@@ -40,7 +40,7 @@ jobs:
       with:
         text: omgggggg new file!!
         attachment: |
-        [
+          [
             {
             "color": "good",
             "author_name": "${{ github.actor }}",
@@ -56,7 +56,7 @@ jobs:
                 }
             ]
             }
-        ] 
+          ] 
     - name: Slack Notification on FAILURE
       if: failure()
       uses: tokorom/action-slack-incoming-webhook@main
