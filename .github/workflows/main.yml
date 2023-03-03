@@ -38,7 +38,7 @@ jobs:
       env:
         INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        text: omgggggg new file!! :100:
+        text: omgggggg new file!!
         attachment: |
         [
             {
