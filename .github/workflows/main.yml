@@ -19,3 +19,12 @@ jobs:
     - run: pipenv install --python `which python`
     - name: Run scraper
       run: pipenv run jupyter execute scrape.ipynb
+      
+    - name: Add and commit
+      run: |
+        git add .
+        git config user.name "Automagic"
+        git config user.email "actions@users.noreply.github.com"
+        git commit -m "moar data" 
+    - name: Push
+      run: git push
