@@ -39,7 +39,7 @@ jobs:
         INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
       with:
         text: omgggggg new file!!
-        attachment: |
+        attachments: |
           [
           {
           "color": "good",
