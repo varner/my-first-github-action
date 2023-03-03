@@ -18,10 +18,9 @@ jobs:
       run: jupyter execute scrape.ipynb
       
     - name: Add and commit
-      run: |
-        git add .
-        git config user.name "Automagic"
-        git config user.email "actions@users.noreply.github.com"
-        git commit -m "moar data" 
-    - name: Push
-      run: git push
+      id: add_commit
+      uses: EndBug/add-and-commit@v8
+      with: 
+        committer_name: Automagic
+        committer_email: actions@users.noreply.github.com
+        message: "Latest data"
