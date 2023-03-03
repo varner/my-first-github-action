@@ -16,7 +16,7 @@ jobs:
         cache: 'pipenv'
     - run: pip install notebook requests bs4
     - name: Run scraper
-      run: pipenv run jupyter execute scrape.ipynb
+      run: jupyter execute scrape.ipynb
       
     - name: Add and commit
       run: |
